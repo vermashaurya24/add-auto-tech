@@ -1,0 +1,8 @@
+.header-container {
+    border: 1px solid red;
+}
+
+.logo-container img {
+    height: 100px;
+    width: 100px;
+}
