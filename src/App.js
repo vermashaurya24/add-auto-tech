@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <h1>Initial commit from react</h1>
+      <h1>Body Here</h1>
     </>
   );
 };
