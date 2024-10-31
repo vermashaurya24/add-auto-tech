@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header";
 
 const App = () => {
@@ -12,4 +13,8 @@ const App = () => {
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(<App />);
+root.render(
+  <Router>
+    <App />
+  </Router>
+);
