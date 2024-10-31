@@ -13,7 +13,7 @@ const App = () => {
   }
 
   return (
-    <div className={mode === "dark" && `mt-0 bg-slate-600`}>
+    <div className={mode === "dark" && `h-dvh bg-slate-600`}>
       <Header mode={mode} toggleMode={toggleMode} />
       <Outlet />
     </div>
