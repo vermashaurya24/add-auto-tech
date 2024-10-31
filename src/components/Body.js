@@ -1,7 +1,7 @@
 const Body = () => {
     return (
-        <div>
-            <h1>Body Here</h1>
+        <div className="bg-inherit">
+            <h1>Body Heree</h1>
         </div>
     );
 };
