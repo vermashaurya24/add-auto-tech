@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 import Header from "./components/Header";
+import Body from "./components/Body";
+import Error from "./components/Error";
 
 const App = () => {
   const [mode, setMode] = useState("light");
@@ -17,10 +20,20 @@ const App = () => {
   );
 };
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      }
+    ],
+    errorElement: <Error />,
+  },
+]);
+
 const root = createRoot(document.getElementById("root"));
 
-root.render(
-  <Router>
-    <App />
-  </Router>
-);
+root.render(<RouterProvider router={appRouter} />);
