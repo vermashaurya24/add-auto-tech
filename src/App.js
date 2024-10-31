@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="mt-3 mx-3">
       <Header mode={mode} toggleMode={toggleMode} />
-      <h1>Body Here</h1>
+      <Outlet />
     </div>
   );
 };
