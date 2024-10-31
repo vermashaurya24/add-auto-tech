@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaTimes } from 'react-icons/fa';
@@ -14,10 +14,10 @@ const NavLinks = ({lightMode, toggleMode}) => {
     return (
         <>
             <button onClick={toggleMode} className="flex items-center pr-4">{lightMode ? <MdLightMode size={28} /> : <MdDarkMode size={28} />}</button>
-            <NavLink className="flex items-center pr-4" to="/">Home {<IoHomeOutline className="m-1" size={22} />}</NavLink>
-            <NavLink className="flex items-center pr-4" to="/projects">Projects {<HiOutlineCpuChip className="m-1" size={25} />}</NavLink>
-            <NavLink className="flex items-center pr-4" to="/contact">Contact {<MdContacts className="m-1" size={21} />}</NavLink>
-            <NavLink className="flex items-center" to="/store">Store {<BsCart2 className="m-1" size={21} />}</NavLink>
+            <Link className="flex items-center pr-4" to="/">Home {<IoHomeOutline className="m-1" size={22} />}</Link>
+            <Link className="flex items-center pr-4" to="/projects">Projects {<HiOutlineCpuChip className="m-1" size={25} />}</Link>
+            <Link className="flex items-center pr-4" to="/contact">Contact {<MdContacts className="m-1" size={21} />}</Link>
+            <Link className="flex items-center" to="/store">Store {<BsCart2 className="m-1" size={21} />}</Link>
         </>
     );
 };
