@@ -16,7 +16,7 @@ const NavLinks = ({ lightMode, toggleMode }) => {
   return (
     <>
       <button onClick={toggleMode} className="flex items-center pr-4">
-        {lightMode ? <MdLightMode size={28} /> : <MdDarkMode size={28} />}
+        {lightMode ? <MdLightMode color="gray" size={28} /> : <MdDarkMode color="gray" size={28} />}
       </button>
       <NavLink className={({ isActive }) => (isActive ? activeClass : inactiveClass)} to="/">
         Home {<IoHomeOutline className="m-1" size={22} />}
