@@ -24,7 +24,7 @@ const NavLinks = ({ lightMode, toggleMode }) => {
       <NavLink className={({ isActive }) => (isActive ? activeClass : inactiveClass)} to="/projects">
         Projects {<HiOutlineCpuChip className="m-1" size={25} />}
       </NavLink>
-      <NavLink className={({ isActive }) => (isActive ? activeClass : inactiveClass)} to="/contact">
+      <NavLink className={({ isActive }) => (isActive ? activeClass : inactiveClass)} to="/about">
         About {<AiOutlineTeam className="m-1" size={23} />}
       </NavLink>
       <NavLink className={({ isActive }) => (isActive ? activeClass : inactiveClass)} to="/store">
