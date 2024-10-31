@@ -32,8 +32,8 @@ const Nav = ({mode, toggleMode}) => {
 
     return (
         <>
-            <div className="lg:w-1/3 flex justify-end pr-4">
-                <div className="hidden w-auto md:flex justify-around pr-6">
+            <div className="lg:w-1/3 flex justify-end pr-6">
+                <div className="hidden w-auto md:flex justify-around">
                     <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
                 </div>
                 <div className="md:hidden">
