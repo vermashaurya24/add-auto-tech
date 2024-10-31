@@ -2,8 +2,10 @@ import Nav from "./Nav";
 import Logo from "./Logo";
 
 const Header = ({mode, toggleMode}) => {
+  const borderColor = mode === "light" ? `border-sky-500` : `border-purple-500`;
+  const gradientFrom = mode === "light" ? `from-sky-300` : `from-violet-300`;
   return (
-    <div className="flex justify-between text-lg items-center z-[20] flex-wrap border-solid border-2 border-sky-500 rounded-xl bg-gradient-to-l from-blue-300">
+    <div className={`flex justify-between text-lg items-center z-[20] flex-wrap border-solid border-2 ${borderColor} rounded-xl bg-gradient-to-l ${gradientFrom}`}>
       <Logo />
       <Nav mode={mode} toggleMode={toggleMode} />
     </div>
