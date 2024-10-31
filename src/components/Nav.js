@@ -42,7 +42,7 @@ const Nav = ({mode, toggleMode}) => {
             </div>
             {isMenuOpen && (
                 <div className="md:hidden flex flex-col my-2 items-center basis-full">
-                    <NavLinks />
+                    <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
                 </div>
             )}
         </>
