@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const Header = ({mode, toggleMode}) => {
   const borderColor = mode === "light" ? `border-sky-500` : `border-purple-500`;
-  const gradientFrom = mode === "light" ? `from-sky-300` : `from-violet-300`;
+  const gradientFrom = mode === "light" ? `from-blue-300` : `from-violet-300`;
   return (
     <div className={`flex justify-between text-lg items-center z-[20] flex-wrap border-solid border-2 ${borderColor} rounded-xl bg-gradient-to-l ${gradientFrom}`}>
       <Logo />
