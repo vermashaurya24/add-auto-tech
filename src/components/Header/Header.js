@@ -1,7 +1,12 @@
+import { useContext } from "react";
+
 import Nav from "./Nav";
 import Logo from "./Logo";
 
-const Header = ({mode, toggleMode}) => {
+import { ModeContext } from "../../context/ModeContext";
+
+const Header = () => {
+  const {mode, toggleMode} = useContext(ModeContext);
   const borderColor = mode === "light" ? `border-sky-500` : `border-purple-500`;
   const gradientFrom = mode === "light" ? `from-blue-300` : `from-violet-300`;
   return (
