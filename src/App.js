@@ -2,9 +2,14 @@ import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
-import Header from "./components/Header";
-import Body from "./components/Body";
+import Header from "./components/Header/Header";
+import AboutUs from "./components/AboutUs";
+import Home from "./components/Home";
 import Error from "./components/Error";
+import ContactUs from "./components/ContactUs";
+import Careers from "./components/Careers";
+import Projects from "./components/Projects";
+import Store from "./components/Store";
 
 const App = () => {
   const [mode, setMode] = useState("light");
@@ -27,8 +32,28 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
-      }
+        element: <Home />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "/career",
+        element: <Careers />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/store",
+        element: <Store />,
+      },
     ],
     errorElement: <Error />,
   },
