@@ -16,7 +16,7 @@ import ModeProvider, { ModeContext } from "./context/ModeContext";
 const App = () => {
   const { mode } = useContext(ModeContext)
   return (
-    <div className={ mode === "dark" ? `h-dvh bg-slate-800` : `h-dvh bg-slate-400` }>
+    <div className={ mode === "dark" ? `h-full bg-slate-800` : `h-full bg-slate-400` }>
       <Header />
       <Outlet />
     </div>
