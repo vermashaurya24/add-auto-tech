@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Body from "./components/Body";
 import Error from "./components/Error";
 
