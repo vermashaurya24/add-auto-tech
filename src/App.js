@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import AboutUs from "./components/AboutUs";
 import Body from "./components/Body";
 import Error from "./components/Error";
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
   const [mode, setMode] = useState("light");
@@ -33,7 +34,11 @@ const appRouter = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
-      }
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
     ],
     errorElement: <Error />,
   },
