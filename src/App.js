@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import Header from "./components/Header/Header";
+import AboutUs from "./components/AboutUs";
 import Body from "./components/Body";
 import Error from "./components/Error";
 
@@ -28,6 +29,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
       }
     ],
     errorElement: <Error />,
