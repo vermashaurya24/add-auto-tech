@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import AboutUs from "./components/AboutUs";
-import Body from "./components/Body";
+import Home from "./components/Home";
 import Error from "./components/Error";
 import ContactUs from "./components/ContactUs";
 import Careers from "./components/Careers";
@@ -32,7 +32,7 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <Home />,
       },
       {
         path: "/about-us",
