@@ -16,12 +16,10 @@ import ModeProvider, { ModeContext } from "./context/ModeContext";
 const App = () => {
   const { mode } = useContext(ModeContext)
   return (
-    <ModeProvider>
-      <div className={ mode === "dark" ? `h-dvh bg-slate-800` : `h-dvh bg-slate-400` }>
-        <Header />
-        <Outlet />
-      </div>
-    </ModeProvider>
+    <div className={ mode === "dark" ? `h-dvh bg-slate-800` : `h-dvh bg-slate-400` }>
+      <Header />
+      <Outlet />
+    </div>
   );
 };
 
@@ -61,4 +59,8 @@ const appRouter = createBrowserRouter([
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={appRouter} />);
+root.render(
+  <ModeProvider>
+    <RouterProvider router={appRouter} />
+  </ModeProvider>
+);
