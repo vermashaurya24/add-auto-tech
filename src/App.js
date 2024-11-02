@@ -7,6 +7,7 @@ import AboutUs from "./components/AboutUs";
 import Body from "./components/Body";
 import Error from "./components/Error";
 import ContactUs from "./components/ContactUs";
+import Careers from "./components/Careers";
 
 const App = () => {
   const [mode, setMode] = useState("light");
@@ -38,6 +39,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactUs />,
+      },
+      {
+        path: "/career",
+        element: <Careers />,
       },
     ],
     errorElement: <Error />,
