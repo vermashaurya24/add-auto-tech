@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -11,15 +11,13 @@ import Careers from "./components/Careers";
 import Projects from "./components/Projects";
 import Store from "./components/Store";
 
-const App = () => {
-  const [mode, setMode] = useState("light");
-  const toggleMode = () => {
-    setMode(prev=>prev==="light" ? "dark" : "light")
-  }
+import ModeProvider, { ModeContext } from "./context/ModeContext";
 
+const App = () => {
+  const { mode } = useContext(ModeContext)
   return (
-    <div className={mode === "dark" ? `h-dvh bg-slate-800` : `h-dvh bg-slate-400`}>
-      <Header mode={mode} toggleMode={toggleMode} />
+    <div className={ mode === "dark" ? `h-full bg-slate-800` : `h-full bg-slate-400` }>
+      <Header />
       <Outlet />
     </div>
   );
@@ -61,4 +59,8 @@ const appRouter = createBrowserRouter([
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={appRouter} />);
+root.render(
+  <ModeProvider>
+    <RouterProvider router={appRouter} />
+  </ModeProvider>
+);
