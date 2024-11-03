@@ -2,8 +2,6 @@ import { useContext } from "react";
 
 import { ModeContext } from "../context/ModeContext";
 
-import { TiTickOutline } from "react-icons/ti";
-
 import PageTitle from "./common/PageTitle";
 import SmallContentCard from "./SmallContentCard";
 
@@ -20,7 +18,7 @@ const AboutUs = () => {
           Our mission is to spearhead a technological revolution in automation,
           empowering industries and individuals alike with innovative solutions
           that elevate everyday life.
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <div className="flex flex-col">
               <SmallContentCard title="Our Vision">
                 In a rapidly evolving technological landscape, we envision a future
@@ -49,31 +47,27 @@ const AboutUs = () => {
             <div className="flex flex-col">
               <SmallContentCard title="What We Do">
                 ADDAUTO TECHNOLOGY operates through two main pillars:
-                <ul>
-                  <li>
-                    <TiTickOutline size={20} />
-                    <div className="-mt-4">
-                      Sourcing Electronic Components: We recognize the challenges faced
-                      by students, researchers, and innovators in sourcing quality
-                      electronic components at competitive prices. Our user-friendly
-                      e-commerce platform simplifies this process, allowing anyone—from
-                      hobbyists to professionals—to order a wide range of electronic
-                      parts with ease. We strive to eliminate barriers in sourcing
-                      components, ensuring that everyone has access to the materials
-                      they need to bring their ideas to life.
-                    </div>
+                <ul className="text-ellipsis">
+                  <li className="mb-3">
+                    ✔️
+                    Sourcing Electronic Components: We recognize the challenges faced
+                    by students, researchers, and innovators in sourcing quality
+                    electronic components at competitive prices. Our user-friendly
+                    e-commerce platform simplifies this process, allowing anyone—from
+                    hobbyists to professionals—to order a wide range of electronic
+                    parts with ease. We strive to eliminate barriers in sourcing
+                    components, ensuring that everyone has access to the materials
+                    they need to fulfill their ideas.
                   </li>
                   <li>
-                    <TiTickOutline size={20} />
-                    <div className="-mt-4">
-                      Automation Solutions: Our commitment to innovation extends beyond
-                      components. We specialize in developing automatic solutions
-                      tailored to various industries, including smart home technology,
-                      urban infrastructure, agriculture, healthcare, and aerospace. Our
-                      goal is to create affordable, state-of-the-art automated machines
-                      that enhance efficiency and productivity, empowering individuals
-                      and businesses to thrive in a competitive market.
-                    </div>
+                    ✔️
+                    Automation Solutions: Our commitment to innovation extends beyond
+                    components. We specialize in developing automatic solutions
+                    tailored to various industries, including smart home technology,
+                    urban infrastructure, agriculture, healthcare, and aerospace. Our
+                    goal is to create affordable, state-of-the-art automated machines
+                    that enhance efficiency and productivity, empowering individuals
+                    and businesses to thrive in a competitive market.
                   </li>
                 </ul>
               </SmallContentCard>
