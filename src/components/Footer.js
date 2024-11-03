@@ -12,7 +12,7 @@ const Footer = () => {
     const {mode} = useContext(ModeContext);
     const borderColor = mode === "light" ? `border-sky-500` : `border-purple-500`;
     const gradientFrom = mode === "light" ? `from-blue-300` : `from-violet-300`;
-    const hoverClass = mode === "light" ? "block text-gray-700 hover:underline rounded-lg" : "block text-gray-700 hover:underline rounded-lg";
+    const hoverClass = "block text-gray-700 hover:underline rounded-lg";
     return (
       <div
         className={`flex flex-col mx-3 bg-white border-solid border-2 ${borderColor} rounded-xl bg-gradient-to-r ${gradientFrom}`}
