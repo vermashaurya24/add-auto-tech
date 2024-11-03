@@ -2,6 +2,8 @@ import { useContext } from "react";
 
 import { ModeContext } from "../context/ModeContext";
 
+import { TiTickOutline } from "react-icons/ti";
+
 import PageTitle from "./common/PageTitle";
 import SmallContentCard from "./SmallContentCard";
 
@@ -11,18 +13,13 @@ const AboutUs = () => {
   return (
     <div className="m-2 p-2">
       <PageTitle>About Us</PageTitle>
-      <div
-        className={`text-left mx-32 text-lg ${
-          lightMode ? "text-gray-700" : "text-gray-400"
-        }`}
-      >
+      <div className={`text-center text-lg ${lightMode ? "text-gray-700" : "text-gray-400"}`}>
         <p>
           At ADDAUTO TECHNOLOGY PRIVATE LIMITED, we are proud to be part of
           India's transformative journey under the ‘Make In India’ initiative.
           Our mission is to spearhead a technological revolution in automation,
           empowering industries and individuals alike with innovative solutions
           that elevate everyday life.
-          <br />
           <div className="flex">
             <div className="flex flex-col">
               <SmallContentCard title="Our Vision">
@@ -52,25 +49,31 @@ const AboutUs = () => {
             <div className="flex flex-col">
               <SmallContentCard title="What We Do">
                 ADDAUTO TECHNOLOGY operates through two main pillars:
-                <ul className="list-disc">
+                <ul>
                   <li>
-                    Sourcing Electronic Components: We recognize the challenges faced
-                    by students, researchers, and innovators in sourcing quality
-                    electronic components at competitive prices. Our user-friendly
-                    e-commerce platform simplifies this process, allowing anyone—from
-                    hobbyists to professionals—to order a wide range of electronic
-                    parts with ease. We strive to eliminate barriers in sourcing
-                    components, ensuring that everyone has access to the materials
-                    they need to bring their ideas to life.
+                    <TiTickOutline size={20} />
+                    <div className="-mt-4">
+                      Sourcing Electronic Components: We recognize the challenges faced
+                      by students, researchers, and innovators in sourcing quality
+                      electronic components at competitive prices. Our user-friendly
+                      e-commerce platform simplifies this process, allowing anyone—from
+                      hobbyists to professionals—to order a wide range of electronic
+                      parts with ease. We strive to eliminate barriers in sourcing
+                      components, ensuring that everyone has access to the materials
+                      they need to bring their ideas to life.
+                    </div>
                   </li>
                   <li>
-                    Automation Solutions: Our commitment to innovation extends beyond
-                    components. We specialize in developing automatic solutions
-                    tailored to various industries, including smart home technology,
-                    urban infrastructure, agriculture, healthcare, and aerospace. Our
-                    goal is to create affordable, state-of-the-art automated machines
-                    that enhance efficiency and productivity, empowering individuals
-                    and businesses to thrive in a competitive market.
+                    <TiTickOutline size={20} />
+                    <div className="-mt-4">
+                      Automation Solutions: Our commitment to innovation extends beyond
+                      components. We specialize in developing automatic solutions
+                      tailored to various industries, including smart home technology,
+                      urban infrastructure, agriculture, healthcare, and aerospace. Our
+                      goal is to create affordable, state-of-the-art automated machines
+                      that enhance efficiency and productivity, empowering individuals
+                      and businesses to thrive in a competitive market.
+                    </div>
                   </li>
                 </ul>
               </SmallContentCard>
