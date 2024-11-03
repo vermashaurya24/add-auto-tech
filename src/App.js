@@ -10,6 +10,7 @@ import ContactUs from "./components/ContactUs";
 import Careers from "./components/Careers";
 import Projects from "./components/Projects";
 import Store from "./components/Store";
+import Footer from "./components/Footer";
 
 import ModeProvider, { ModeContext } from "./context/ModeContext";
 
@@ -19,6 +20,7 @@ const App = () => {
     <div className={ mode === "dark" ? `h-full bg-slate-800` : `h-full bg-slate-400` }>
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };
