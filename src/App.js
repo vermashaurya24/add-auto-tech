@@ -10,6 +10,11 @@ import ContactUs from "./components/ContactUs";
 import Careers from "./components/Careers";
 import Projects from "./components/Projects";
 import Store from "./components/Store";
+import Footer from "./components/Footer";
+import PrivacyPolicy from "./components/PrivacyPolicy"
+import TermsAndConditions from "./components/TermsAndConditions";
+import FAQ from "./components/FAQ";
+import StorePolicies from "./components/StorePolicies";
 
 import ModeProvider, { ModeContext } from "./context/ModeContext";
 
@@ -19,6 +24,7 @@ const App = () => {
     <div className={ mode === "dark" ? `h-full bg-slate-800` : `h-full bg-slate-400` }>
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };
@@ -51,6 +57,22 @@ const appRouter = createBrowserRouter([
       {
         path: "/store",
         element: <Store />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "/terms-conditions",
+        element: <TermsAndConditions />,
+      },
+      {
+        path: "/faq",
+        element: <FAQ />,
+      },
+      {
+        path: "/store-policies",
+        element: <StorePolicies />,
       },
     ],
     errorElement: <Error />,

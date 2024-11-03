@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { ModeContext } from "../context/ModeContext";
+import { ModeContext } from "../../context/ModeContext";
 
 const SmallContentCard = (props) => {
     const {mode} = useContext(ModeContext);
