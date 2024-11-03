@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <div className="m-2 p-2">
       <PageTitle>About Us</PageTitle>
-      <div className={`text-center text-lg ${lightMode ? "text-gray-700" : "text-gray-400"}`}>
+      <div className={`text-center text-lg ${lightMode ? "text-gray-700" : "text-gray-200"}`}>
         <p>
           At ADDAUTO TECHNOLOGY PRIVATE LIMITED, we are proud to be part of
           India's transformative journey under the ‘Make In India’ initiative.
