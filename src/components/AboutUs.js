@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ModeContext } from "../context/ModeContext";
 
 import PageTitle from "./common/PageTitle";
-import SmallContentCard from "./SmallContentCard";
+import SmallContentCard from "./common/SmallContentCard";
 
 const AboutUs = () => {
   const {mode} = useContext(ModeContext);
