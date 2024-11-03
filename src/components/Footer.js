@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "./Header/Logo";
 
 import { FaWhatsapp } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 import { ModeContext } from "../context/ModeContext";
 
@@ -29,6 +30,10 @@ const Footer = () => {
                 <Link to="/career" className={hoverClass}>
                     Career
                 </Link>
+                <div className="flex text-gray-700">
+                    <SiGmail size={17} className="mr-2" />
+                    <div>addautotech@gmail.com</div>
+                </div>
             </div>
             <div className="flex flex-col my-2">
                 <div className="text-xl">Our Policies</div>
@@ -47,13 +52,13 @@ const Footer = () => {
             </div>
             <div className="flex flex-col my-2">
                 <div className="text-xl">Social</div>
-                <Link to="/privacy-policy" className={hoverClass}>
+                <Link to="https://www.facebook.com/addautotech" className={hoverClass} target="_blank" rel="noopener noreferrer">
                     Facebook
                 </Link>
-                <Link to="/terms-conditions" className={hoverClass}>
+                <Link to="https://www.linkedin.com/company/addauto-technology-private-limited/" className={hoverClass} target="_blank" rel="noopener noreferrer">
                     LinkedIn
                 </Link>
-                <Link to="/faq" className={hoverClass}>
+                <Link to="https://www.youtube.com/channel/UCg5JgeuNmkPAq2R35UiccXg" className={hoverClass} target="_blank" rel="noopener noreferrer">
                     Youtube
                 </Link>
                 <div className="flex text-gray-700">
@@ -63,18 +68,18 @@ const Footer = () => {
             </div>
         </div>
         <div className={`flex flex-col items-center md:flex-row justify-evenly text-sm ${mode === "light" ? "bg-blue-400" : "bg-violet-400"} rounded-lg`}>
-          <div>Copyright: Addauto Technology Private Limited, 2021</div>
+          <div>Copyright©️: Addauto Technology Private Limited, 2021</div>
           <div>Das Vila, 17, Rajani Kanta Chowdhury Lane, Shibpur, Howrah-711103</div>
           <div className="text-xs">
             Website designed, built and maintained with ❤️ by{" "}
-            <a
-              href="https://www.linkedin.com/in/shaurya-raj-verma/"
+            <Link
+              to="https://www.linkedin.com/in/shaurya-raj-verma/"
               target="_blank"
               rel="noopener noreferrer"
               className={`${mode === "light" ? "text-blue-600" : "text-violet-600"} hover:underline`}
             >
               Shaurya
-            </a>
+            </Link>
           </div>
         </div>
       </div>
