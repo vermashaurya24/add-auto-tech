@@ -12,6 +12,24 @@ const cards = [
    
 ];
 
+const sectionCards=[
+    {
+      title: "Smart Irrigation System",
+      description: "Real-time soil moisture data automates watering, saving water and boosting crop health.",
+      image: "https://images.unsplash.com/photo-1581091012184-5c7b89a7b7c9?q=80&w=1080&auto=format",
+    },
+    {
+      title: "AI-Powered Crop Monitoring",
+      description: "Drones equipped with AI scan fields to detect crop diseases and anomalies early.",
+      image: "https://images.unsplash.com/photo-1609630875174-574c94bf4b5d?q=80&w=1080&auto=format",
+    },
+    {
+      title: "Weather Adaptive Sensors",
+      description: "Sensors dynamically adapt to changing weather conditions for consistent data.",
+      image: "https://images.unsplash.com/photo-1615572359973-fc0c59c7c94e?q=80&w=1080&auto=format",
+    },
+  ]
+
 const tagline = "Your search for IoT-based sensors ends here.";
 
 const containerVariants = {
@@ -118,6 +136,48 @@ const Body = () => {
 ))}
         </div>
       </div>
+
+{/* Zig-Zag Feature Section */}
+<section className="w-full flex flex-col items-center py-20 space-y-24 px-6 md:px-20">
+  {sectionCards.map((item, index) => {
+    const isEven = index % 2 === 0;
+    return (
+      <motion.div
+        key={index}
+        className={`flex h-[60vh] flex-col md:flex-row items-center gap-8 w-full md:w-[70vw] bg-white/5 border border-white/20 rounded-3xl backdrop-blur-md p-8 shadow-2xl relative group overflow-hidden
+          ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
+        initial={{ opacity: 0, x: isEven ? -100 : 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        {/* Glow background shape */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-teal-400/10 to-pink-500/5 blur-2xl opacity-30 group-hover:opacity-50 transition duration-500" />
+
+        {/* Image */}
+        <div className="w-full md:w-1/2">
+          <img
+            src={item.image}
+            alt={item.title}
+            className="rounded-xl w-full h-[250px] object-cover shadow-md"
+          />
+        </div>
+
+        {/* Text */}
+        <div className="text-white md:w-1/2 z-10">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-cyan-300 drop-shadow">
+            {item.title}
+          </h3>
+          <p className="text-sm md:text-base text-gray-200 leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      </motion.div>
+    );
+  })}
+</section>
+
+
     </div>
   );
 };
