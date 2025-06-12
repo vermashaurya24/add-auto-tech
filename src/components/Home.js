@@ -137,8 +137,28 @@ const Body = () => {
         </div>
       </div>
 
+
+
 {/* Zig-Zag Feature Section */}
-<section className="w-full flex flex-col items-center py-20 space-y-24 px-6 md:px-20">
+
+  <section className="w-full flex flex-col items-center py-20 space-y-24 px-6 md:px-20">
+
+  {/* Section Heading */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="text-center mb-4"
+  >
+    <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300 drop-shadow-lg">
+      Recent Highlights
+    </h2>
+    <p className="text-gray-300 mt-4 text-sm md:text-base max-w-2xl mx-auto">
+      Explore our latest achievements, innovations, and impactful moments in transforming smart agriculture through IoT.
+    </p>
+  </motion.div>
+
   {sectionCards.map((item, index) => {
     const isEven = index % 2 === 0;
     return (
