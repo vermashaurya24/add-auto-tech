@@ -54,7 +54,7 @@ const Body = () => {
   
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen flex flex-col items-center justify-center px-4 py-5 overflow-hidden relative">
+    <div className="pt-20 bg-gradient-to-b from-gray-900 to-black text-white min-h-screen flex flex-col items-center justify-center px-4 py-5 overflow-hidden relative">
         <div className="background-shape shape1"></div>
     <div className="background-shape shape2"></div>
       {/* Tagline */}
