@@ -12,7 +12,7 @@ import { FaCaretDown } from "react-icons/fa";
 
 const NavLinks = ({ lightMode, toggleMode }) => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const activeClass = `flex items-center mr-4 border-b-2 ${lightMode ? "border-blue-500 text-blue-500" : "border-purple-500 text-purple-500"}`;
+  const activeClass = `flex items-center mr-4 border-b-2 text-xl ${lightMode ? "border-blue-500 text-blue-500" : "border-purple-500 text-[#b400ff]"}`;
   const hoverActiveClass = `flex items-center mr-4 ${lightMode ? "text-blue-500" : "text-purple-500"}`;
   const inactiveClass = `flex items-center mr-4 text-gray-700 ${lightMode ? "hover:text-blue-500" : "hover:text-purple-500"}`;
   return (

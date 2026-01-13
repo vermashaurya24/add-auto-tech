@@ -50,7 +50,7 @@ const letterVariants = {
 };
 
 const Body = () => {
-  const cardList = [...cards, ...cards]; // duplicate for infinite scroll
+  const cardList = [...cards,...cards]; // duplicate for infinite scroll
   
 
   return (
