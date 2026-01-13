@@ -1,16 +1,34 @@
 import { NavLink } from "react-router-dom";
 
-const About = ({ lightMode }) => {
-  const hoverClass = lightMode ? "block px-4 py-2 text-gray-700 hover:bg-blue-200 rounded-lg" : "block px-4 py-2 text-gray-700 hover:bg-purple-200 rounded-lg";
+const About = ({ lightMode, openDropdown }) => {
+  const hoverClass = `block px-4 py-0 text-gray-700 rounded ${
+    lightMode ? " hover:bg-blue-200 " : " hover:bg-purple-200 "
+  }`;
   return (
-    <div className="absolute top-full mt-0 w-36 bg-white shadow-lg rounded-lg z-10">
-      <NavLink to="/about-us" className={hoverClass}>
+    <div className={`absolute top-14 right-2 w-24 bg-white dark:bg-gray-800 rounded-lg 
+      shadow-lg z-1 p-2 
+    transition-all duration-200 ease-in-out
+    
+  `}>
+      <NavLink
+        to="/about-us"
+        className={hoverClass}
+        onClick={openDropdown}
+      >
         About Us
       </NavLink>
-      <NavLink to="/contact-us" className={hoverClass}>
+      <NavLink
+        to="/contact-us"
+        className={hoverClass}
+        onClick={openDropdown}
+      >
         Contact Us
       </NavLink>
-      <NavLink to="/career" className={hoverClass}>
+      <NavLink
+        to="/career"
+        className={hoverClass}
+        onClick={openDropdown}
+      >
         Career
       </NavLink>
     </div>

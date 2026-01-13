@@ -12,9 +12,20 @@ import { FaCaretDown } from "react-icons/fa";
 
 const NavLinks = ({ lightMode, toggleMode }) => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const activeClass = `flex items-center mr-4 border-b-2 text-xl ${lightMode ? "border-blue-500 text-blue-500" : "border-purple-500 text-[#b400ff]"}`;
-  const hoverActiveClass = `flex items-center mr-4 ${lightMode ? "text-blue-500" : "text-purple-500"}`;
-  const inactiveClass = `flex items-center mr-4 text-gray-700 ${lightMode ? "hover:text-blue-500" : "hover:text-purple-500"}`;
+  const activeClass = `flex items-center mr-4 border-b-2 text-xl ${
+    lightMode
+      ? "border-blue-500 text-blue-500"
+      : "border-purple-500 text-[#383073]"
+  }`;
+  const hoverActiveClass = `flex items-center mr-4 text-xl ${
+    lightMode ? "text-blue-500" : "text-purple-500"
+  }`;
+  const inactiveClass = `flex items-center mr-4 text-gray-700 text-xl bg-white rounded-lg p-2 ${
+    lightMode ? "hover:text-blue-500" : "hover:text-purple-500"
+  }`;
+  const openDropdown = () => {
+    setIsAboutOpen(!isAboutOpen);
+  };
   return (
     <>
       <button onClick={toggleMode} className="flex items-center pr-4">
@@ -36,11 +47,25 @@ const NavLinks = ({ lightMode, toggleMode }) => {
       >
         Projects {<HiOutlineCpuChip className="m-1" size={25} />}
       </NavLink>
-      <div className="relative flex items-center" onMouseEnter={() => setIsAboutOpen(true)} onMouseLeave={() => setIsAboutOpen(false)}>
+      <div className="relative flex items-center">
         <button className={`${isAboutOpen ? hoverActiveClass : inactiveClass}`}>
-          About {<FaCaretDown className="m-1 mb-1" size={25} />}
+          About{" "}
+          {
+            <FaCaretDown
+              className="m-1 mb-1"
+              size={25}
+              onClick={openDropdown}
+            />
+          }
         </button>
-        {isAboutOpen && <AboutDropdown lightMode={lightMode} />}
+        {isAboutOpen && (
+          <AboutDropdown
+            isAboutOpen={isAboutOpen}
+            setIsAboutOpen={setIsAboutOpen}
+            openDropdown={openDropdown}
+            lightMode={lightMode}
+          />
+        )}
       </div>
       <NavLink
         className={({ isActive }) => (isActive ? activeClass : inactiveClass)}
