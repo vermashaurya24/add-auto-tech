@@ -15,21 +15,25 @@ const Nav = ({ mode, toggleMode }) => {
 
   return (
     <>
-      <div className="lg:w-1/3 flex justify-end pr-6">
+      <div className=" flex lg:w-1/3 w-full justify-end pr-6 relative">
+         {isMenuOpen ? (
+        <div className="lg:hidden flex flex-col my-2 items-center absolute top-10 right-0  w-3/4 h-screen bg-white">
+          <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
+          <FaTimes className="text-red-500" size={30} onClick={()=>setIsMenuOpen(false)}/>
+        </div>
+      ) : (
         <div className="hidden w-auto lg:flex justify-around">
           <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
+      
         </div>
-        <div className="lg:hidden">
+      )}
+        <div className="lg:hidden flex items-center">
           <button onClick={toggleMenu}>
-            {isMenuOpen ? <FaTimes size={30} /> : <FaBarsStaggered size={30} />}
+            {!isMenuOpen && <FaBarsStaggered size={30} />}
           </button>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="lg:hidden flex flex-col my-2 items-center basis-full">
-          <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
-        </div>
-      )}
+   
     </>
   );
 };

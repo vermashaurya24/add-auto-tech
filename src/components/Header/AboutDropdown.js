@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 
 const About = ({ lightMode, openDropdown }) => {
-  const hoverClass = `block px-4 py-0 text-gray-700 rounded ${
-    lightMode ? " hover:bg-blue-200 " : " hover:bg-purple-200 "
+  const hoverClass = `block px-4 py-2 text-gray-700 rounded text-sm font-semibold text-center ${
+    lightMode ? " hover:bg-blue-200  duration-200 ease-in-out" : " hover:bg-purple-200 duration-200 ease-in-out"
   }`;
   return (
-    <div className={`absolute top-14 right-2 w-24 bg-white dark:bg-gray-800 rounded-lg 
+    <div className={`absolute top-14 right-0 min-w-36 bg-white dark:bg-gray-800 rounded-lg 
       shadow-lg z-1 p-2 
     transition-all duration-200 ease-in-out
     
