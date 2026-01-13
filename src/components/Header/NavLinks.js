@@ -19,7 +19,8 @@ const NavLinks = ({ lightMode, toggleMode }) => {
   const hoverActiveClass = `flex items-center mr-4 text-xl ${
     lightMode ? "text-blue-500" : "text-purple-500"
   }`;
-  const inactiveClass = `flex items-center mr-4 text-gray-700 text-xl bg-gray-300 rounded-xl p-2 ${
+  const inactiveClass = `flex items-center mr-4 text-gray-700 text-xl 
+  bg-gray-300 rounded-xl p-2 px-4 md:px-2 ${
     lightMode ? "hover:text-blue-500" : "hover:text-purple-500"
   }`;
 
@@ -39,7 +40,7 @@ const NavLinks = ({ lightMode, toggleMode }) => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row items-center">
+    <div className="flex flex-col space-y-6  h-screen lg:flex-row md:h-auto items-center">
       <button onClick={toggleMode} className="flex items-center pr-4">
         {lightMode ? <MdLightMode color="gray" size={28} /> : <MdDarkMode color="gray" size={28} />}
       </button>
