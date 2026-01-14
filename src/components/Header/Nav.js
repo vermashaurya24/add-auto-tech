@@ -14,19 +14,16 @@ const Nav = ({ mode, toggleMode }) => {
   };
 
   return (
-    <>
-      <div className=" flex lg:w-1/3 w-full justify-end pr-6 relative">
+    
+      <div className=" flex w-screen justify-end pr-6 relative">
         {isMenuOpen ? (
        
             <div
-              className={`lg:hidden items-center absolute top-12 right-0 pt-20
-          w-3/4 h-screen z-10 shadow-lg bg-white transition-transform 
-          transition-all duration-300 ease-in-out
+              className={` items-center absolute top-12 right-0 pt-20
+          h-screen w-full z-10 shadow-lg lg:hidden 
            ${mode==="light"?"bg-gradient-to-b from-blue-300 to-[#5366C2]":"bg-violet-300"}`}
             >
               <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
-               
-         
            <FaTimes
               className="text-gray-600 absolute top-2 right-2"
               size={30}
@@ -34,7 +31,7 @@ const Nav = ({ mode, toggleMode }) => {
             />
           </div>
         ) : (
-          <div className="hidden w-auto lg:flex justify-around">
+          <div className="hidden lg:w-auto lg:flex lg:justify-around">
             <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
           </div>
         )}
@@ -46,7 +43,7 @@ const Nav = ({ mode, toggleMode }) => {
           </button>
         </div>
       </div>
-    </>
+   
   );
 };
 
