@@ -73,16 +73,15 @@ const NavLinks = ({ lightMode, toggleMode }) => {
       <div className="relative flex items-center" ref={dropdownRef}>
         <button
           onClick={openDropdown}
-          className={`flex items-center mr-4 text-xl text-gray-700 
-  bg-gray-300 rounded-xl p-2 px-4 md:px-2${
-    isAboutActive
-      ? lightMode
-        ? " border-b-2  p-0 px-0 bg-transparent  border-blue-500 text-blue-500"
-        : " border-b-2 border-purple-500 text-[#383073] p-0 bg-transparent"
-      : lightMode
-      ? "text-gray-700 hover:text-blue-500"
-      : "text-gray-700 hover:text-purple-500"
-  }`}
+          className={`flex items-center mr-4 text-xl  ${
+            isAboutActive
+              ? lightMode
+                ? "border-b-2  p-0 px-0 bg-transparent  border-blue-500 text-blue-500"
+                : " border-b-2 border-purple-500 text-[#383073] p-0 bg-transparent"
+              : lightMode
+              ? "text-gray-700 bg-gray-300 rounded-xl p-2 px-4 md:px-2 hover:text-blue-500"
+              : "text-gray-700 bg-gray-300 rounded-xl p-2 px-4 md:px-2 hover:text-purple-500"
+          }`}
         >
           About <FaCaretDown className="m-1 mb-1" size={25} />
         </button>
