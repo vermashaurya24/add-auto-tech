@@ -14,11 +14,11 @@ const NavLinks = ({ lightMode, toggleMode }) => {
   const activeClass = `flex items-center mr-4 border-b-2 text-xl ${
     lightMode
       ? "border-blue-500 text-blue-500"
-      : "border-purple-500 text-[#383073]"
+      : "border-[#383073] text-[#383073]"
   }`;
-  const hoverActiveClass = `flex items-center mr-4 text-xl ${
-    lightMode ? "text-blue-500" : "text-purple-500"
-  }`;
+  // const hoverActiveClass = `flex items-center mr-4 text-xl ${
+  //   lightMode ? "text-blue-500" : "text-purple-500"
+  // }`;
   const inactiveClass = `flex items-center mr-4 text-gray-700 text-xl 
   bg-gray-300 rounded-xl p-2 px-4 md:px-2 ${
     lightMode ? "hover:text-blue-500" : "hover:text-purple-500"
@@ -77,7 +77,7 @@ const NavLinks = ({ lightMode, toggleMode }) => {
             isAboutActive
               ? lightMode
                 ? "border-b-2  p-0 px-0 bg-transparent  border-blue-500 text-blue-500"
-                : " border-b-2 border-purple-500 text-[#383073] p-0 bg-transparent"
+                : " border-b-2 border-[#383073] text-[#383073] p-0 bg-transparent"
               : lightMode
               ? "text-gray-700 bg-gray-300 rounded-xl p-2 px-4 md:px-2 hover:text-blue-500"
               : "text-gray-700 bg-gray-300 rounded-xl p-2 px-4 md:px-2 hover:text-purple-500"
