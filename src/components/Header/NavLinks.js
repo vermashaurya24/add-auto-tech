@@ -47,7 +47,7 @@ const NavLinks = ({ lightMode, toggleMode }) => {
   }, []);
 
   return (
-    <div className="flex flex-col space-y-6  h-screen lg:flex-row md:h-auto items-center">
+    <div className="flex flex-col space-y-6 h-auto max-sm:h-screen md:h-auto md:flex-row items-center">
       <button onClick={toggleMode} className="flex items-center pr-4">
         {lightMode ? (
           <MdLightMode color="gray" size={28} />

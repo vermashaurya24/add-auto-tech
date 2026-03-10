@@ -19,8 +19,8 @@ const Nav = ({ mode, toggleMode }) => {
         {isMenuOpen ? (
        
             <div
-              className={` items-center absolute top-12 right-0 pt-20
-          h-screen w-full z-10 shadow-lg lg:hidden 
+              className={`items-center absolute top-[3.8rem] right-0 pt-20
+         h-screen w-full z-10 shadow-lg rounded transition-all duration-200 ease-in md:hidden 
            ${mode==="light"?"bg-gradient-to-b from-blue-300 to-[#5366C2]":"bg-violet-300"}`}
             >
               <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
@@ -31,11 +31,11 @@ const Nav = ({ mode, toggleMode }) => {
             />
           </div>
         ) : (
-          <div className="hidden lg:w-auto lg:flex lg:justify-around">
+          <div className="hidden md:w-auto md:flex md:justify-around">
             <NavLinks lightMode={lightMode} toggleMode={toggleMode} />
           </div>
         )}
-        <div className="lg:hidden flex items-center">
+        <div className=" md:hidden">
           <button onClick={toggleMenu}>
             {!isMenuOpen && (
               <FaBarsStaggered size={30} onClick={() => setIsMenuOpen(true)} />

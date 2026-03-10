@@ -9,7 +9,7 @@ const AboutUs = () => {
   const {mode} = useContext(ModeContext);
   const lightMode = mode === "light";
   return (
-    <div className="m-2 p-2">
+    <div className="mt-[96px] m-2 p-2">
       <PageTitle>About Us</PageTitle>
       <div className={`text-center text-lg ${lightMode ? "text-gray-700" : "text-gray-200"}`}>
         <p>

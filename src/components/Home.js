@@ -54,7 +54,7 @@ const Body = () => {
   
 
   return (
-    <div className="mt-24 bg-gradient-to-b from-gray-900 to-black text-white min-h-screen flex flex-col items-center justify-center px-4 py-5 overflow-hidden relative">
+    <div className="mt-24 bg-gradient-to-b from-gray-900 to-black text-white relative min-h-screen flex flex-col items-center justify-center px-4 py-5 overflow-hidden relative">
         <div className="background-shape shape1"></div>
     <div className="background-shape shape2"></div>
       {/* Tagline */}
@@ -78,13 +78,13 @@ const Body = () => {
 
         {/*Our Vision*/}
        <motion.div
-  className="relative left-[-20%] mb-20 mt-16 px-8 py-12 max-w-[80%] md:max-w-[60%] bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/30 text-white"
+  className=" mb-20 mt-16 px-8 py-12 max-w-[80%] md:max-w-[60%] bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/30 text-white"
   initial={{ opacity: 0, y: 40 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: 'easeOut' }}
   viewport={{ once: true }}
 >
-  <div className="absolute inset-0 rounded-3xl border border-white/20 blur-[2px] pointer-events-none" />
+  <div className="rounded-3xl border border-white/20 blur-[2px] pointer-events-none" />
   <motion.h2
     className="text-2xl md:text-3xl font-bold mb-4 text-teal-200"
     initial={{ opacity: 0, x: -30 }}

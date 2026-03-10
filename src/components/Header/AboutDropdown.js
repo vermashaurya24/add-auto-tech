@@ -10,8 +10,8 @@ const About = ({ lightMode, openDropdown }) => {
   return (
     <div
       className={`absolute top-12 right-0 min-w-36
-       bg-white dark:bg-gray-800 rounded-lg shadow-lg z-10 p-2 
-    transition-all duration-200 ease-in-out
+       bg-white dark:bg-gray-800 rounded-lg
+        shadow-lg z-10 p-2 transition-all duration-200 ease-in-out
     
   `}
     >
