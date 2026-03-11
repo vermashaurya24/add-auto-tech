@@ -27,9 +27,8 @@ const AboutUs = () => {
         </p>
         <div className="space-y-8">
           <div
-            className={`p-7 group lg:max-w-xl lg:transition-all lg:duration-600 lg:ease-linear 
-  lg
-  :hover:max-w-2xl
+            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-600 lg:ease-linear 
+  lg:hover:max-w-4xl
               ${lightMode ? "bg-slate-200" : "bg-slate-500"} rounded-2xl `}
           >
             <h2
@@ -37,7 +36,7 @@ const AboutUs = () => {
             >
               Our Vision
             </h2>
-            <p className="mt-3 sm:block lg:max-w-xl lg:hidden lg:group-hover:block">
+            <p className="mt-3 sm:block lg:max-w-xl  lg:hidden lg:group-hover:block ">
               In a rapidly evolving technological landscape, we envision a
               future where automation seamlessly integrates into every aspect of
               our lives. From smart homes to agricultural advancements and
@@ -75,7 +74,7 @@ const AboutUs = () => {
           </div>
 
           <div
-            className={`p-7 group lg:max-w-xl lg:transition-all lg:duration-200 
+            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-200 
           ease-in-out hover:max-w-4xl ${lightMode ? "bg-slate-200" : "bg-slate-500"} rounded-2xl`}
           >
             <h2
@@ -92,6 +91,16 @@ const AboutUs = () => {
               right, and we work tirelessly to make it affordable and practical
               for everyone.
             </p>
+          </div>
+          <div>
+            <SmallContentCard title="Join Us on Our Journey">
+                As we embark on this exciting venture, we invite you to join us on our
+                journey toward a smarter, more automated future. Together, let’s
+                harness the power of technology to create solutions that inspire
+                change and improve lives. With ADDAUTO TECHNOLOGY, you are not just
+                choosing a service provider; you are becoming a part of a movement
+                dedicated to innovation, accessibility, and excellence.
+              </SmallContentCard>
           </div>
         </div>
       </div>
