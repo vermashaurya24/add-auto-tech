@@ -27,8 +27,8 @@ const AboutUs = () => {
         </p>
         <div className="space-y-8">
           <div
-            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-600 lg:ease-linear 
-  lg:hover:max-w-4xl
+            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-1000
+          ease-in-out  lg:hover:max-w-4xl
               ${lightMode ? "bg-slate-200" : "bg-slate-500"} rounded-2xl `}
           >
             <h2
@@ -74,7 +74,7 @@ const AboutUs = () => {
           </div>
 
           <div
-            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-200 
+            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-1000
           ease-in-out hover:max-w-4xl ${lightMode ? "bg-slate-200" : "bg-slate-500"} rounded-2xl`}
           >
             <h2
