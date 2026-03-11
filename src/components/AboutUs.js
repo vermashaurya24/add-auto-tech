@@ -27,8 +27,9 @@ const AboutUs = () => {
         </p>
         <div className="space-y-8">
           <div
-            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-1000
-          ease-in-out  lg:hover:max-w-4xl
+            className={`p-7 animate-glow
+               group lg:max-w-xl xl:max-w-3xl 
+          lg:transition-all lg:duration-1000 ease-in-out  lg:hover:max-w-4xl
               ${lightMode ? "bg-slate-200" : "bg-slate-500"} rounded-2xl `}
           >
             <h2
@@ -74,7 +75,7 @@ const AboutUs = () => {
           </div>
 
           <div
-            className={`p-7 group lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-1000
+            className={`p-7 group animate-glow lg:max-w-xl xl:max-w-3xl lg:transition-all lg:duration-1000
           ease-in-out hover:max-w-4xl ${lightMode ? "bg-slate-200" : "bg-slate-500"} rounded-2xl`}
           >
             <h2
@@ -94,13 +95,13 @@ const AboutUs = () => {
           </div>
           <div>
             <SmallContentCard title="Join Us on Our Journey">
-                As we embark on this exciting venture, we invite you to join us on our
-                journey toward a smarter, more automated future. Together, let’s
-                harness the power of technology to create solutions that inspire
-                change and improve lives. With ADDAUTO TECHNOLOGY, you are not just
-                choosing a service provider; you are becoming a part of a movement
-                dedicated to innovation, accessibility, and excellence.
-              </SmallContentCard>
+              As we embark on this exciting venture, we invite you to join us on
+              our journey toward a smarter, more automated future. Together,
+              let’s harness the power of technology to create solutions that
+              inspire change and improve lives. With ADDAUTO TECHNOLOGY, you are
+              not just choosing a service provider; you are becoming a part of a
+              movement dedicated to innovation, accessibility, and excellence.
+            </SmallContentCard>
           </div>
         </div>
       </div>

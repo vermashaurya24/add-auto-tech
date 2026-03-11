@@ -6,3 +6,19 @@
 html {
   font-family: 'Poppins', sans-serif;
 }
+
+@keyframes glow{
+    0% {
+    box-shadow: 0 0 5px 0 #a5dae3 ,1px 0 15px 0 #8070e4;
+  }
+  50% {
+    box-shadow: 0 0 30px 0 #136471, 1px 0 35px 0 #443896;
+  }
+  100% {
+    box-shadow: 0 0 15px 0 #22d3ee, 1px 0 15px 0 #8070e4;
+  }
+}
+
+.animate-glow{
+  animation: glow 2s infinite ease-in-out ;
+}
