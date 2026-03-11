@@ -15,7 +15,7 @@ const Footer = () => {
     const hoverClass = "block text-gray-700 hover:underline rounded-lg";
     return (
       <div
-        className={`fixed bottom-0 z-50 w-full flex flex-col bg-white 
+        className={`flex flex-col bg-white 
             border-solid border-2 ${borderColor}  bg-gradient-to-r ${gradientFrom}`}
       >
         <div className="flex flex-col md:flex-row m-6 p-6 justify-evenly">
