@@ -37,7 +37,7 @@ const AboutUs = () => {
             >
               Our Vision
             </h2>
-            <p className="mt-3 sm:block lg:max-w-xl  lg:hidden lg:group-hover:block ">
+            <p className="mt-3 sm:block lg:max-w-xl  ">
               In a rapidly evolving technological landscape, we envision a
               future where automation seamlessly integrates into every aspect of
               our lives. From smart homes to agricultural advancements and
@@ -83,7 +83,7 @@ const AboutUs = () => {
             >
               Why choose us?
             </h2>
-            <p className="mt-3 block lg:hidden lg:group-hover:block">
+            <p className="mt-3 block ">
               While many companies operate in the automation space, we stand out
               with our unwavering passion for innovation and our dedication to
               serving the people of India. Our team is driven by a collective

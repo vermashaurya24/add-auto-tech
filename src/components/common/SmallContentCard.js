@@ -15,7 +15,7 @@ const SmallContentCard = (props) => {
       <div className={`text-5xl ${lightMode && "border-gray-700"} `}>
         {props.title}
       </div>
-      <div className="m-4 max-w-xl  ml-auto lg:hidden lg:group-hover:block">
+      <div className="m-4 max-w-xl  ml-auto ">
         {props.children}
       </div>
     </div>
