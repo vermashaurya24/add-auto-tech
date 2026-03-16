@@ -5,17 +5,15 @@ const MeetTheTeam = () => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <div className="pt-56 px-8 md:px-16 pb-32">
+    <div className="pt-56 px-8 md:px-16 pb-32 bg-gradient-to-b from-gray-900 to-black">
       <section className="grid grid-cols-1 min-[900px]:grid-cols-2 min-[1470px]:grid-cols-3 gap-8">
         {teamData.map((member, index) => {
           return (
             <div key={index}
-              className={`${mode === "dark" ? "shadow-[0px_0px_15px_0px_rgba(239,24,111,0.50)] " : "shadow-[0_10px_25px_rgba(0,0,0,0.25)] "} p-6 rounded-2xl 
-              hover:shadow-[0_10px_25px_rgba(0,0,0,0.50)] transition-shadow duration-300 ease-in`}
+              className={`${mode === "dark" ? "shadow-[0px_0px_15px_0px_rgba(239,24,111,0.50)] " : "shadow-[0px_0px_15px_0px_rgba(112,233,201,0.75)] "} p-6 rounded-2xl 
+              hover:shadow-[0_10px_25px_rgba(0,0,0,0.50)] transition-shadow duration-300 ease-in bg-white/10 backdrop-blur-xl`}
             >
-              <div
-              
-                className="flex gap-6 max-[500px]:flex-col max-[500px]:gap-0 mb-6"
+              <div className="flex gap-6 max-[500px]:flex-col max-[500px]:gap-0 mb-6"
               >
                 <section className="">
                   <img

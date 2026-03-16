@@ -49,7 +49,7 @@ const sectionCards = [
   },
 ];
 
-const tagline = "Your search for IoT-based sensors ends here.";
+const tagline = "Your search for IoT-based sensors ends here";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -72,10 +72,10 @@ const Body = () => {
   const cardList = [...cards, ...cards]; // duplicate for infinite scroll
 
   return (
-    <div className="mt-24 bg-gradient-to-b from-gray-900 to-black text-white relative min-h-screen flex flex-col items-center justify-center px-4 py-5 overflow-hidden relative">
+    <div className="pt-56 bg-gradient-to-b from-gray-900 to-black text-white relative min-h-screen flex flex-col items-center justify-center px-4 py-5 overflow-hidden relative">
       {/* Tagline */}
       <motion.h1
-        className="text-8xl md:text-5xl w-[80vw]  font-bold text-center mb-6 flex flex-wrap justify-center"
+        className="text-5xl md:text-5xl w-[80vw] font-bold text-center mb-6 flex flex-wrap justify-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -100,8 +100,6 @@ const Body = () => {
         <div className="rounded-3xl border border-white/20 blur-[2px] mb-6" />
         <motion.h2
           className="text-2xl md:text-3xl font-bold mb-4 text-teal-200"
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           Our Vision
