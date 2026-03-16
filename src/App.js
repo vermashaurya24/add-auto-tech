@@ -15,7 +15,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy"
 import TermsAndConditions from "./components/TermsAndConditions";
 import FAQ from "./components/FAQ";
 import StorePolicies from "./components/StorePolicies";
-
+import MeetTheTeam from "./components/MeetTheTeam";
 import ModeProvider, { ModeContext } from "./context/ModeContext";
 
 const App = () => {
@@ -74,6 +74,10 @@ const appRouter = createBrowserRouter([
         path: "/store-policies",
         element: <StorePolicies />,
       },
+      {
+        path:"/meet-the-team",
+        element: <MeetTheTeam />,
+      }
     ],
     errorElement: <Error />,
   },
