@@ -9,12 +9,12 @@ const MeetTheTeam = () => {
       <section className="grid grid-cols-1 min-[900px]:grid-cols-2 min-[1470px]:grid-cols-3 gap-8">
         {teamData.map((member, index) => {
           return (
-            <div
+            <div key={index}
               className={`${mode === "dark" ? "shadow-[0px_0px_15px_0px_rgba(239,24,111,0.50)] " : "shadow-[0_10px_25px_rgba(0,0,0,0.25)] "} p-6 rounded-2xl 
               hover:shadow-[0_10px_25px_rgba(0,0,0,0.50)] transition-shadow duration-300 ease-in`}
             >
               <div
-                key={index}
+              
                 className="flex gap-6 max-[500px]:flex-col max-[500px]:gap-0 mb-6"
               >
                 <section className="">

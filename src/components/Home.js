@@ -6,22 +6,22 @@ const cards = [
   {
     title: "Latest Product",
     description: "Check out our latest innovation in smart agriculture.",
-    href: "latest-product",
+    href: "/latest-product",
   },
   {
     title: "Trending Now",
     description: "Top-performing sensors in 2025.",
-    href: "trending-now",
+    href: "/trending-now",
   },
   {
     title: "Meet the Team",
     description: "The brains behind the breakthrough.",
-    href: "meet-the-team",
+    href: "/meet-the-team",
   },
   {
     title: "Join Us",
     description: "We're hiring AI & IoT enthusiasts.",
-    href: "careers",
+    href: "/careers",
   },
 ];
 
