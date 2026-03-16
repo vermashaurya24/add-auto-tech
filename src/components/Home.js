@@ -72,10 +72,10 @@ const Body = () => {
   const cardList = [...cards, ...cards]; // duplicate for infinite scroll
 
   return (
-    <div className="pt-56 bg-gradient-to-b from-gray-900 to-black text-white relative min-h-screen flex flex-col items-center justify-center px-4 py-5 overflow-hidden relative">
+    <div className="pt-56  bg-gradient-to-b from-gray-900 to-black text-white relative min-h-screen flex flex-col items-center justify-center overflow-hidden ">
       {/* Tagline */}
       <motion.h1
-        className="text-5xl md:text-5xl w-[80vw] font-bold text-center mb-6 flex flex-wrap justify-center"
+        className="px-12 text-[60px] md:text-6xl lg:text-8xl font-bold text-center mb-6 flex flex-wrap justify-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -93,11 +93,11 @@ const Body = () => {
 
       {/*Our Vision*/}
       <motion.div
-        className=" mb-20 mt-16 px-8 py-12 max-w-[80%] md:max-w-[40%] bg-white/10  rounded-3xl shadow-2xl border border-white/30 text-white"
+        className="mt-16 px-8 py-12 w-[90vw] md:min-w-[60%] lg:max-w-[50%] bg-white/10  rounded-3xl shadow-2xl border border-white/30 text-white"
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <div className="rounded-3xl border border-white/20 blur-[2px] mb-6" />
+        <div className="rounded-3xl border border-white/20 blur-[2px] mb-6 " />
         <motion.h2
           className="text-2xl md:text-3xl font-bold mb-4 text-teal-200"
           transition={{ duration: 0.6, delay: 0.3 }}
